@@ -1,0 +1,37 @@
+# Zadanie 1:
+# Napisz funkcję w Pythonie, która przyjmuje listę liczb i zwraca największą z nich. Nazwij funkcję "find_max_number".
+"""
+
+list = [1,2,3,4,5,6,7,8,9,-1]
+def find_max_number(list):
+    print("Lista to", list)
+    maxnum = list[0]
+    print("Maxnum to", maxnum)
+    for i in list:
+        if i > maxnum:
+            maxnum = i
+            print("Maxnum po iteracji to", maxnum)
+
+
+find_max_number(list)
+
+#Zadanie 2:
+# Oblicz wartość bezwzględną z liczby tzn. spraw, aby liczba ujemna stała się dodatnią.
+# Wartość bezwzględna usuwa 'minus' liczbie ujemnej. Wartość dodatnią i zerową pozostawia bez zmian.
+# Tzn. liczba:
+# -5 ma stać się 5.
+# 4 ma zostać 4.
+# -1 ma stać się 1.
+# 0 ma zostać 0.
+# 1) Pobierz od użytkownika wartość i zapisz ją do zmiennej
+# 2) Jeśli liczba jest ujemna to zmień wartość zmiennej tak, aby była dodatnia. Wypisz wynik.
+
+
+liczba = int(input("Wprowadź liczbę: \n"))
+# print(liczba)
+# print(type(liczba))
+if liczba < 0:
+    liczba = -liczba
+    print("Wartość bezwzgędna jest przeciwna i wynosi", liczba)
+else:
+    print("Wartość bezwzględna wynosi tyle co wprowadzona liczba, czyli:", liczba)
