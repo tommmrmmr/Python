@@ -1,0 +1,273 @@
+import math
+
+#Zadanie1. Zdefiniuj zmienną i wydrukuj ją
+print("----------Zadanie 1")
+wiek = 33
+imie ="Tomasz"
+
+print("Twój wiek to: ")
+print(wiek)
+print()
+
+#Zadanie 2. Sprawdź jakiego typu jest zmienna imię i  wydrukuj tą informację.
+
+print("----------Zadanie 2")
+print(type(imie))
+print()
+
+#Zadanie 3. Podnieś swój wiek do potęgi wiek. Wydrukuj. Następnie wydrukuj resztę z dzielenia potęki wiek, przez wiek minus  1.
+# Wydrukuj.
+print("----------Zadanie 3")
+print((wiek*wiek) % (wiek-1))
+print()
+
+#Zadanie 4. Zdefiniuj 3 zmienne z trzema róznymi wartościami. Zrób to wszystko w jednej lini i print każdą zawartość
+print("----------Zadanie 4")
+a,b,c = 1,2,3
+print(c)
+print(b)
+print(a)
+print()
+
+#Zadanie 5. Zdefiniuj 2 zmienne. Jedno z imieniem męskim, drugie z żeńskim. Stwórz prosty program, który wydrukuje
+# ostatnią literę imienia
+print("----------Zadanie 5")
+imie1 = "Adam"
+imie2 = "Ewa"
+
+print(imie1[-1])
+print(imie2[-1])
+print()
+
+#Zadanie 6. Zdefiniuj zmienną imię3, i wydrukuj tylko drugą i trzecią literę tego imienia
+print("----------Zadanie 6")
+imie3 = "Arkadiusz"
+print(imie3[1:3])
+print()
+
+#Zadanie 7. Wyznacz pierwiastek z 16. Załaduj niezbędną bibliotekę
+print("----------Zadanie 7")
+print(math.sqrt(16))
+print()
+
+#Zadanie 8. Zdefiniuj zmienną imie4. Zapisz imie z małych liter. Następnie za pomocą dostępnych w python funkcji zmień
+# wielkośc liter
+print("----------Zadanie 8")
+imie4 = "zygfryd"
+print(imie4.capitalize())
+print(imie4.upper())
+print(imie4.lower())
+
+print()
+
+#Zadanie 9. Zaczytaj dane wprowadzone z klawiatury i zapisz je w zmiennej read i wyświetl zawartość. Następnie zaczytaj
+# dwie liczby i wyświetl ich zawartość
+print("----------Zadanie 9")
+print("Zaczytaj dane wprowadzone z klawiatury i zapisz je w zmiennej read i wyświetl zawartość. Następnie zaczytaj"
+      "dwie liczby i wyświetl ich zawartość")
+read = input()
+print(read)
+aa = input()
+bb = input()
+print(int(aa)+int(bb))
+print()
+
+#Zadanie 10. Wykorzystując dane z powyższego zadania. Wyświetl wartość "Mój wynik dodawania to [suma zmiennych])"
+print("----------Zadanie 10")
+print("Mój wynik dodawania to " , int(aa) + int(bb))
+print()
+
+# lub
+
+print("Mój wynik dodawania t:", int(aa) + int(bb))
+
+# Zadanie11. Napisz program, który będzie pytał Cię o imie i  bedzie wyświetlał "Hej, Cześć [imię]". Nastepnie zapyta
+# "Ile masz lat?" i wyświetli w odpowiedzi "Za rok będziesz miał [lat + 1]
+
+
+jmeno = input("Jak masz na imię?" + "\n")
+print("Hej, Cześć", jmeno + "\n")
+lat = int(input("Ile masz lat?" + "\n"))
+print("Za rok będziesz miał", lat + 1, "lata")
+print()
+
+
+#Zadanie12. Wykonaj instrukcję warunkową "if". Zdefiniuj 2 zmienne (input) a i b Jeśli a > b to wydrukuj "a jest
+print("----------Zadanie 12")
+# wieksze od b". Wykorzystaj też else if a < b i a =b jako else
+
+a = int(input("Wprowadź pierwszą liczbę" + "\n"))
+b = int(input("Wprowadź drugą liczbę" + "\n"))
+
+
+if (a > b):
+    print(a, "jest większe od", b)
+elif (a < b):
+    print(a, "jest mniejsze od", b)
+else:
+    print(a, "jest równe", b, "\n")
+
+#print("Wartość a ma taki typ danych", type(a))
+
+#Zadanie 13. Bazując na wczesniejszym ćwiczeniu zrób kalkulator. Zaczytaj trzy zmienne "wybór" (gdzie będziemy wybierać
+# pomiędzy używym znakiem matematycznym 1 jako mnożenie, 2 jako dzielenie, 3 jako dodawanie, 4 jako odejmowanie), l1
+# jako pierwsza liczba i l2 jako druga liczba. Przekaż użytkownikowi instrukcje odnośnie jakiej cyfry dla jakiej
+# czynności użyć. Wyłap też błąd jeżeli użytkownik wprowadzi błędne cyfry jako else. W przypadku dzielenia, zrób pętle
+# w pętli dzielenia, jeżeli druga wartość przyjmuje wartość 0, wyświetl komunikat... "Synek.. bo jak Ci zaraz ..."
+print("----------Zadanie 13")
+wybor =int(input('Wprowadź na klawiaturze: 1 jako mnożenie lub 2 jako dzielenie lub 3 jako dodawanie lub'
+                 ' 4 jako odejmowanie lub 5 jako potęgowanie, 6 jako reszta z dzielenia' + "\n"))
+
+l1 = int(input("Wprowadź pierwsza wartość: "))
+l2 = int(input("Wprowadź drugą wartość: "))
+
+if (wybor == 1):
+    print(l1 * l2)
+elif (wybor == 2):
+    if (l2 == 0):
+        print("Synek.. bo jak Ci zaraz ...")
+    else:
+        print(l1 / l2)
+elif (wybor == 3):
+    print(l1 + l2)
+elif (wybor == 4):
+    print(l1 - l2)
+elif (wybor == 5):
+    print(l1 ** l2)
+elif (wybor == 6):
+    print(l1 % l2)
+else:
+    print("Wprowadzono błędny znak arytmetyczny")
+
+#Zadanie 14. Oblicz wartość bezwzględną. -5, 4, -1, 0
+print("----------Zadanie 14")
+
+
+wb = int(input("Wprowadź wartość bezwzględną:" + "\n"))
+
+if (wb > 0):
+    print("Wartość bezwzględna to:", wb)
+elif (wb < 0):
+    #print("Wartość bezwzględna to:", wb - wb - wb)
+    print("Wartość bezwzględna to:", abs(wb))
+elif (wb == 0):
+    print("Wartość bezwzględna to:", wb)
+
+
+
+#Zadanie15. Sprawdź czy wprowadzona liczba jest z zakresu od 1 do 10. Użyj  alternatywy i koniunkcji i negacji.
+print("----------Zadanie 14")
+
+zakres = int(input("Wprowadź liczbę od 1 do 10" + "\n"))
+if (zakres >= 1 and zakres <= 10):
+    print("Dobrze!")
+else:
+    print("Coś nie tak" + "\n")
+
+#Zadanie. Zrób pętle while, która powtórzy się 100x. Zdefiniuj zmienną o nazwie liczba i przypisz wartość 0. Następnie
+# Zrób to samo w druga stronę
+print("----------Zadanie 15")
+print
+
+liczba = 0
+
+while (liczba <= 100):
+    print(liczba)
+    #liczba = liczba + 1 #zapis mniej popularny
+    liczba += 1
+
+print()
+liczba = 100
+
+while (liczba >= 0):
+    print(liczba)
+    #liczba = liczba + 1 #zapis mniej popularny
+    liczba -= 1
+
+#Zadanie16. Stwórz pętle, która będzie 4x sumowała liczby podane przez użytkownika. Zapisz liczbę w zmiennej x
+# a wynik w wyniku, który będzie przyjmować 0.
+print("----------Zadanie 16")
+#Poniżej rozwiązanie bez pęttli
+wynik = 0
+x = int(input("Podaj liczbę" + "\n"))
+wynik = wynik + x
+x = int(input("Podaj liczbę" + "\n"))
+wynik = wynik + x
+x = int(input("Podaj liczbę" + "\n"))
+wynik = wynik + x
+x = int(input("Podaj liczbę" + "\n"))
+wynik = wynik + x
+print("Suma wszystkich wprowadzonych przez Ciebie liczb to:" ,wynik, "\n")
+
+#poniżej rozwiązanie z pętlą (To właściwe)
+print("Przykład właściwy z pętlą")
+wynik = 0
+i = 0
+while (i < 4):
+    x = int(input("Podaj liczbę" + "\n"))
+    #wynik = wynik + x
+    wynik += x
+    i += 1
+print("Suma wszystkich wprowadzonych przez Ciebie liczb to:" ,wynik, "\n")
+
+
+#Zadanie16. Wykonaj to samo zadanie co powyżej używając pętli for i in range. Dodatkowo wypisz wartośc i, po każdej
+# pętli
+print("----------Zadanie 16")
+
+wynik = 0
+for i in range(0 , 4): #zamiast range(0, 4), mogłoby być: [0,1,2,3]
+    x = int(input("Podaj liczbę" + "\n"))
+    #wynik = wynik + x
+    wynik += x
+    print("Wartość i wynosi obecnie:" , i)
+
+print("Suma wszystkich wprowadzonych przez Ciebie liczb to:" ,wynik, "\n")
+
+
+
+#Zadanie17. Bazując na pętli range. Sprawdź które liczby w przedziale 0 - 1200 są parzyste. Wykorzystaj if, %.
+print("----------Zadanie 17")
+wynik = 0
+for i in range(0 , 1200):
+    if (wynik % 2 == 0):
+        print(wynik, "Jest liczbą parzystą")
+    wynik += 1
+print()
+
+
+#Zadanie 18. Pętla range. Wypisz liczby od 0 do 200, które są podzielne przez 5 ale są niepodzielne przez 7 (koniunkcja)
+print("----------Zadanie 18")
+wynik = 0
+for i in range(0, 200):
+    if (wynik % 5 == 0) and (wynik % 7 != 0):
+        print("Liczba jest podzielna przez pięć i niepodzielna przez siedem:", wynik)
+    wynik +=1
+print()
+
+#Zadanie 19. Pętla range. Napisz pętle range która iteruje się 3x i wyniki sumują się ze sobą. Wprowadzana liczba ma być
+# dodatnia. W przypadku błędnie wprowadzonej użyj break i jakiś komunikat
+print("----------Zadanie 19")
+wynik = 0
+for i in range(3):
+    x = int(input("Podaj dodatnią liczbę:"))
+    if (x > 0):
+        wynik += x
+    else:
+        print("Miała być liczba dodatnia!")
+        break
+    print("Aktualny wynik dodawania to:", wynik)
+
+#Zadanie 20. Napisz pętle range która iteruje się 3x i wyniki inputu sumują się ze sobą.
+# Wprowadzana liczba ma być dodatnia. W przypadku błędnie wprowadzonej użyj continue i jakiś komunikat
+print("----------Zadanie 20")
+
+wynik = 0
+for i in range(3):
+    x = int(input("Podaj dodatnią liczbę:"))
+    if (x > 0):
+        wynik += x
+    else:
+        print("Miała być liczba dodatnia!")
+        continue
+    print("Aktualny wynik dodawania to:", wynik)
