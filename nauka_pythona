@@ -271,3 +271,207 @@ for i in range(3):
         print("Miała być liczba dodatnia!")
         continue
     print("Aktualny wynik dodawania to:", wynik)
+    
+    #Zadanie 21. Napisz pętle while, bazując na powyższym zadaniu. Pamiętaj o zdefiniowaniu zmiennej wynik i "i"
+print("----------Zadanie 21")
+wynik = 0
+i = 0
+while i<3:
+    x = int(input("Podaj dodatnią liczbę:"))
+    if (x > 0):
+        wynik += x
+    else:
+        print("Miała być liczba dodatnia!")
+        continue
+    print("Aktualny wynik dodawania to:", wynik)
+    i += 1
+#Zadanie 22. Dodawanie liczb parzystych podanych przez użytkownika. Napisz program, który doda 3 parzyste liczby dodane
+# przez użytkownika
+wynik = 0
+i = 0
+
+while i<3:
+    x = int(input("Podaj dodatnią i parzystą liczbę:"))
+    if (x > 0) and (x % 2 == 0):
+        wynik += x
+    else:
+        print("Miała być liczba dodatnia i  parzysta!")
+        continue
+    print("Aktualny wynik dodawania to:", wynik)
+    i += 1
+#Zadanie 23. Napisz program, który będzie się pytał o liczbe użytkownika i chcemy sprawdzić czy jest równa sekretnej
+# liczbie, szukanej liczbie. Jeżeli liczba, którą podał uzytkonik jest za duża, to poinformujemy, że jest za duża,
+# jak za mala to za mała w porównaniu do tej co szukamy.
+
+# Pierwsze działające rozwiązanie
+sekretnaLiczba = 69
+
+twojaLiczba = int(input("Zgadnij sekretną liczbę. Podaj twoją liczbę: "))
+
+if twojaLiczba == sekretnaLiczba:
+    print("Brawo! zgadłeś:", twojaLiczba)
+else:
+    if twojaLiczba > sekretnaLiczba:
+        print("Twoja liczba jest większa od Sekretnej liczby")
+    else:
+        if twojaLiczba < sekretnaLiczba:
+            print("Twoja liczba jest mniejsza od Sekretnej liczby")
+#Drugie działające rozwiązanie
+
+i = 0
+sekretnaLiczba = 69
+
+while i<1:
+    twojaLiczba = int(input("Zgadnij sekretną liczbę. Podaj twoją liczbę: "))
+    if twojaLiczba == sekretnaLiczba:
+        print("Brawo! zgadłeś:", twojaLiczba)
+
+    else:
+        if twojaLiczba > sekretnaLiczba:
+            print("Twoja liczba jest większa od Sekretnej liczby")
+            continue
+        else:
+            if twojaLiczba < sekretnaLiczba:
+                print("Twoja liczba jest mniejsza od Sekretnej liczby")
+                continue
+    i += 1
+# Trzecie działające rozwiązanie z Udemy
+szukanaLiczba = 40
+zgadywanaLiczba = 0
+while zgadywanaLiczba != szukanaLiczba:
+    zgadywanaLiczba = int(input("Odgadnij liczbę: "))
+    if zgadywanaLiczba > szukanaLiczba:
+        print("Za duża")
+    elif zgadywanaLiczba < szukanaLiczba:
+        print("Za mała")
+    else:
+        print("brawo")
+
+#Zadanie 24. Stwórz listę, o nazwie imiona, która będzie posiadała 5 elementów (Arek, Wiola, Karol, Kuba, Adi). Stwórz
+# drugą listę "liczby" z wartościami 1,54,-2,20.
+# Następnie wyświetl listę imiona i zrób pętle for, która wyświetli imiona (posłuż się wartością " for imie in imiona").
+# Analogicznie: stwórz drugą pętle liczby, wg instukcji: For every iteration in list liczby, print these iterations"
+
+imiona = ["Arek", "Wiola", "Karol", "Kuba", "Adi"]
+liczby = [1, 54, -2, 20]
+
+print(imiona)
+
+for imie in imiona:
+    print(imie)
+
+for i in liczby:
+    print(i)
+
+#Zadanie25. Bazując na listach z wcześniejszego przykładu. Wyświetl 3 element listy używając numeru do wyświetlenia
+# Następnie wyświetl ten sam element używając ujemnej wartości.imiona = ["Arek", "Wiola", "Karol", "Kuba", "Adi"]
+liczby = [1, 54, -2, 20]
+
+print(imiona[2])
+print(imiona[-3])
+
+
+
+#Zadanie26. Bazując na wcześniejszych listach podmień ostatnie imie na imię Wojtek. Użyj wartości ujemnej i
+# w osobnej lini dodatniej podczas  przypisywania. Wyświetl te wartości
+imiona = ["Arek", "Wiola", "Karol", "Kuba", "Adi"]
+liczby = [1, 54, -2, 20]
+
+
+print(imiona[-1])
+print(imiona[4])
+imiona[-1] = "Wojtek"
+print(imiona[-1])
+
+
+#Zadanie27. Na podstawie listy imiona  z poprzedniego zadania, wyświetl ile elementów ma ta lista
+
+print(len(imiona))
+
+
+#Zadanie28.Na podstawie listy imiona i liczby z poprzedniego zadania, dodaj nowe imie "Tom" na końcu listy imiona.
+
+imiona = ["Arek", "Wiola", "Karol", "Kuba", "Adi"]
+liczby = [1, 54, -2, 20]
+
+imiona.append("Tom")
+print(imiona)
+
+#Zadanie29. Rozszerz listę liczby o cztery nowe wartości 1,2,3,4
+
+liczby.extend([1,2,3,4])
+print(liczby)
+
+#Zadanie30. Wstaw na między Arka, a Wiolę, "Antona"
+
+imiona = ["Arek", "Wiola", "Karol", "Kuba", "Adi"]
+imiona.insert(1, "Anton")
+print(imiona)
+
+#Zadanie31. Wyświetl, jaki index ma imię Karol
+
+imiona = ["Arek", "Wiola", "Karol", "Kuba", "Adi"]
+print(imiona.index("Karol"))
+
+#Zadanie32. Posortuj listę liczby rosnąco i malejąco.
+
+liczby = [1, 54, -2, 20]
+liczby.sort()
+print(liczby)
+liczby.sort(reverse=True)
+print(liczby)
+
+#Zadanie33. Wyświetl wartośc minimalną w liście liczby.
+
+liczby = [1, 54, -2, 20]
+print(min(liczby))
+
+#Zadanie34. Wyświetl wartość maksymalną w liście liczby.
+
+print(max(liczby))
+
+#Zadanie35. Policz i Wyświetl ile razy wystąpiła wartość 1 w liście liczby. Upewnij się, że komenda extend z zadanie 29
+# działa
+
+print(liczby)
+liczby.extend([1,2,3,4])
+print(liczby)
+print(liczby.count(1))
+
+#Zadanie36. Wyrzuć ostatni element z listy imiona. Upewnij się, że Tom z zadania 28 został dodany
+
+print(imiona)
+imiona.append("Tom")
+print(imiona)
+imiona.pop()
+print(imiona)
+
+#Zadanie37. Usuń Antona z listy imiona. Upewnij sie, że Anton w zadaniu 30 został dodany
+
+print(imiona)
+imiona.insert(1, "Anton")
+print(imiona)
+imiona.remove("Anton")
+print(imiona)
+
+
+#Zadanie38. Wyczyść listę.
+
+print(imiona)
+imiona.clear()
+print(imiona)
+
+
+
+#Zadanie39. Odwróć wartości w liście.
+
+print(imiona)
+imiona.reverse()
+print(imiona)
+
+
+#Zadanie40. Różnica między krotką a listą jest taka, że jak zapiszesz coś w krotce raz to nie można juz zmieniać.
+#Stwórz krotkę,która będzie miała 4 wartości. 1, 42, 12, -4 i wyświetl pierwszą wartośc tej krotki
+
+krotka = 1, 42, 12, -4
+print(krotka[0])
